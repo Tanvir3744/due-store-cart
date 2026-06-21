@@ -1,0 +1,72 @@
+/* ============================================================
+   section-contact-form.css
+   Base structural styles for the New Contact Form section.
+   Section-specific overrides live inside the Liquid {% style %} block.
+   ============================================================ */
+
+/* Reset */
+.contact-section,
+.contact-section *,
+.contact-section *::before,
+.contact-section *::after {
+  box-sizing: border-box;
+}
+
+.contact-section {
+  width: 100%;
+}
+
+.contact-section__inner {
+  max-width: 100%;
+}
+
+/* Left column base */
+.contact-section__left {
+  min-width: 0;
+}
+
+/* Right column / card base */
+.contact-section__right {
+  min-width: 0;
+}
+
+/* Form reset */
+.contact-section__form {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-section__form input,
+.contact-section__form textarea,
+.contact-section__form select {
+  font-family: inherit;
+}
+
+/* Visually hidden (accessible) */
+.contact-section .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Page width constraint */
+.contact-section.page-width {
+  /* max-width: var(--page-width, 1200px);
+  margin-left: auto;
+  margin-right: auto; */
+  /* padding-left: var(--page-width-margin, 2rem);
+  padding-right: var(--page-width-margin, 2rem); */
+}
+
+@media screen and (min-width: 750px) {
+  .contact-section.page-width {
+    /* padding-left: var(--page-width-margin-desktop, 5rem);
+    padding-right: var(--page-width-margin-desktop, 5rem); */
+  }
+}

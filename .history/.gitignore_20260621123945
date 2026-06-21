@@ -1,0 +1,14 @@
+# Shopify CLI
+.shopify/
+shopify.app.toml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Node (if any local tooling)
+node_modules/
