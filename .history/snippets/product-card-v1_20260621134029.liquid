@@ -1,5 +1,3 @@
-{% assign isProductAvailable = product.selected_or_first_available_variant.available %}
-
 <div class="--card-container">
   <div class="--product-image">
     {% if product.featured_image != blank %}
@@ -65,11 +63,7 @@
     data-variantId="{{ product.selected_or_first_available_variant.id }}"
     class="--add-to-cart-btn"
   >
-    {% if isProductAvailable %}
-      Add To Cart
-    {% else %}
-      Out of Stock
-    {% endif %}
+    Add To Cart
   </button>
 
   {% comment %}

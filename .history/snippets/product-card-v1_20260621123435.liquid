@@ -1,11 +1,7 @@
-{% assign isProductAvailable = product.selected_or_first_available_variant.available %}
-
 <div class="--card-container">
   <div class="--product-image">
     {% if product.featured_image != blank %}
-      <a href="{{ product.url }}">
-        {{ product.featured_image | image_url: width: product.featured_image.width | image_tag }}
-      </a>
+     <a href="{{ product.url }}">  {{ product.featured_image | image_url: width: product.featured_image.width | image_tag }} </a>
     {% endif %}
     {% if product.url != blank %}
       <a href="{{product.url}}" class="--link_overlay"></a>
@@ -40,12 +36,8 @@
 
     <div class="--card-price">
       {% if product.compare_at_price > product.price %}
-        <span
-          ><del>{{ product.compare_at_price | money }}</del></span
-        >
-        <span
-          ><strong>{{ product.price | money }}</strong></span
-        >
+        <span><del>{{ product.compare_at_price | money }}</del></span>
+        <span><strong>{{ product.price | money }}</strong></span>
 
         {% comment %} calculation of savings percentage {% endcomment %}
         {% assign savings = product.compare_at_price | minus: product.price %}
@@ -53,30 +45,17 @@
         <span id="--savings">Save {{ savings_percentage }}% </span>
 
       {% else %}
-        <span class="--new-price"
-          ><strong>{{ product.price | money }}</strong></span
-        >
+        <span class="--new-price"><strong>{{ product.price | money }}</strong></span>
       {% endif %}
     </div>
   </div>
 
-  <button
-    data-variant-available="{{ product.selected_or_first_available_variant.available }}"
-    data-variantId="{{ product.selected_or_first_available_variant.id }}"
-    class="--add-to-cart-btn"
-  >
-    {% if isProductAvailable %}
-      Add To Cart
-    {% else %}
-      Out of Stock
-    {% endif %}
-  </button>
 
-  {% comment %}
-    {% if section.settings.btn_txt != blank %}
-      <a href="{{ section.settings.btn_url }}" class="--add-to-cart-btn">{{ section.settings.btn_txt }}</a>
-    {% else %}
-      <a href="{{ section.settings.btn_url }}" class="--add-to-cart-btn">Add To Cart</a>
-    {% endif %}
-  {% endcomment %}
+  <button data-variantId = "{{ product.selected_or_first_available_variant.id }}" class="--add-to-cart-btn"> Add To Cart</button>
+
+  {% comment %} {% if section.settings.btn_txt != blank %}
+    <a href="{{ section.settings.btn_url }}" class="--add-to-cart-btn">{{ section.settings.btn_txt }}</a>
+  {% else %}
+    <a href="{{ section.settings.btn_url }}" class="--add-to-cart-btn">Add To Cart</a>
+  {% endif %} {% endcomment %}
 </div>
