@@ -111,7 +111,7 @@
     border: 1px solid black;
     transition: 0.3s ease;
 
-    @media (max-width:768px) {
+    @media (max-width:768 px) {
       width:14px;
       height:14px;
     }
