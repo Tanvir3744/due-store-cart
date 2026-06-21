@@ -72,4 +72,11 @@
     {% endif %}
   </button>
 
+  {% comment %}
+    {% if section.settings.btn_txt != blank %}
+      <a href="{{ section.settings.btn_url }}" class="--add-to-cart-btn">{{ section.settings.btn_txt }}</a>
+    {% else %}
+      <a href="{{ section.settings.btn_url }}" class="--add-to-cart-btn">Add To Cart</a>
+    {% endif %}
+  {% endcomment %}
 </div>

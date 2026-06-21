@@ -59,13 +59,9 @@
         font-size:15px;
         font-weight:600;
         letter-spacing:none;
-      }
-    }
 
-    .--add-to-cart-btn:disabled {
-      border-color: #999;
-      color: #999;
-      cursor: not-allowed;
+      }
+
     }
     
     .--add-to-cart-btn::before {
