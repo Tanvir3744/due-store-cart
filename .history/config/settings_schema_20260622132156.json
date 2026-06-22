@@ -41,63 +41,21 @@
         "id": "enable_cart_progress_bar",
         "label": "Enable Cart Progress Bar",
         "default": true
-      }, 
+      },
       {
         "type": "color",
-        "id": "cart_progress_bar_color",
-        "label": "Cart Progress Bar Color",
+        "id": "progress_bar_color",
+        "label": "Progress Bar Color",
         "default": "#000000"
       },
       {
         "type": "color",
-        "id": "cart_progress_bar_background_color",
-        "label": "Cart Progress Bar Background Color",
+        "id": "progress_bar_background_color",
+        "label": "Progress Bar Background Color",
         "default": "#e0e0e0"
-      },
-      {
-        "type": "header",
-        "content": "Tier 1",
-      },
-      {
-        "type": "number",
-        "id": "tier1_amount",
-        "label": "Tier 1 Amount",
-      },
-      {
-        "type": "text",
-        "id": "tier1_message",
-        "label": "Tier 1 Message"
-      }
-      ,
-      {
-        "type": "header",
-        "content": "Tier 2",
-      },
-      {
-        "type": "number",
-        "id": "tier2_amount",
-        "label": "Tier 2 Amount",
-      },
-      {
-        "type": "text",
-        "id": "tier2_message",
-        "label": "Tier 2 Message"
-      },
-      {
-        "type": "header",
-        "content": "Tier 3",
-      },
-      {
-        "type": "number",
-        "id": "tier3_amount",
-        "label": "Tier 3 Amount",
-      },
-      {
-        "type": "text",
-        "id": "tier3_message",
-        "label": "Tier 3 Message"
       }
     ]
+
   },
   {
     "name": "t:settings_schema.colors.name",
