@@ -1,0 +1,25 @@
+{% assign cart_amount = cart.original_total_price%}
+{% assign tier1_amount = settings.tier1_amount | times: 100 %}
+{% assign tier2_amount = settings.tier2_amount | times: 100 %}
+{% assign tier3_amount = settings.tier3_amount | times: 100 %}
+
+
+
+
+
+<div class="free-shipping-progress-bar" style="background-color: {{ settings.bg_color }}; margin-top: {{ settings.margin_top }}; margin-bottom: {{ settings.margin_bottom }}; padding-top: {{ settings.padding_top }}; padding-bottom: {{ settings.padding_bottom }};">
+  <div class="progress-bar-container">
+    <div class="progress-bar" style="width: {% if cart_amount >= tier3_amount %}100%{% elsif cart_amount >= tier2_amount %}66.66%{% elsif cart_amount >= tier1_amount %}33.33%{% else %}0%{% endif %}; background-color: {{ settings.progress_color }};"></div>
+  </div>
+  <p class="progress-text" style="color: {{ settings.text_color }};">
+    {% if cart_amount >= tier3_amount %}
+      Congratulations! You have qualified for free shipping!
+    {% elsif cart_amount >= tier2_amount %}
+      You're almost there! Add ${{ tier3_amount | minus: cart_amount | money_without_currency }} more to get free shipping.
+    {% elsif cart_amount >= tier1_amount %}
+      Keep going! Add ${{ tier2_amount | minus: cart_amount | money_without_currency }} more to get free shipping.
+    {% else %}
+      Add ${{ tier1_amount | minus: cart_amount | money_without_currency }} more to get free shipping.
+    {% endif %}
+  </p>
+</div>

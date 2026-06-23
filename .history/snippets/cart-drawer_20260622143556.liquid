@@ -74,8 +74,8 @@
             {{- 'icon-close.svg' | inline_asset_content -}}
           </span>
         </button>
+        {% render 'free-shipping-progress-bar' %}
       </div>
-      {% render 'free-shipping-progress-bar' %}
       <cart-drawer-items
         {% if cart == empty %}
           class=" is-empty"
